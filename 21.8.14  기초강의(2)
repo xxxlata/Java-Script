@@ -1,0 +1,255 @@
+연산자
+어떤 작업을 컴퓨터에게 지시하기 위한 기호이다.
+a =1에서 =는 대입연산자이다.
+
+비교연산자
+> < <= >= true , false
+
+동등연산자(equal operator)
+== 
+== 사용하기
+같은 의미를 가지고있다면 인정해준다.
+alert(1==2)             //false
+alert(1==1)             //true
+alert("one"=="two")     //false 
+alert("one"=="one")     //true
+
+일치연산자(strict equal operator)
+=== //이것을 쓰는것이 좋다.
+===사용하기
+alert(1=='1');              //true
+alert(1==='1');             //false
+좌항과 우항이 같아야하며, 데이터 타입 또한 같아야 인정해준다.
+
+사용예시
+alert(null == undefined);       //true
+alert(null === undefined);      //false
+
+alert(true == 1);               //true
+alert(true === 1);              //false
+동등연산자는 숫자 1을 트루값으로 본다.
+alert(true == '1');             //true
+alert(true === '1');            //false
+alert(0 === -0);                //true
+alert(NaN === NaN);             //false
+----------------------------------------------------------------------
+아래는 부등호의 예시이다.
+!=
+alert(1!=2);            //true
+alert(1!=1);            //false
+alert("one"!="two");    //true
+alert("one"!="one");    //false
+>
+alert(10>20);   //false
+alert(10>1);    //true
+alert(10>10);   //false
+>=
+alert(10>=20);      //false
+alert(10>=1);       //true
+alert(10>=10);      //true
+-----------------------------------------------------------------------
+조건문
+Boolean 
+if문의 예시
+//ex 1)
+if(true){
+    alert('result : true');
+}
+
+//ex 2)
+if(false){
+    alert('result : true');
+}
+
+//ex 3)
+if(true){
+    alert(1);
+    alert(2);
+    alert(3);
+    alert(4);
+}
+alert(5);
+
+//ex 4)
+if(false){
+    alert(1);
+    alert(2);
+    alert(3);
+    alert(4);
+}
+alert(5);
+---------------------------------------------------------------
+<else문>
+//ex 1)
+
+if(true){
+    alert(1);
+} else {
+    alert(2);
+}
+
+//ex 2)
+
+if(false){
+    alert(1);
+} else {
+    alert(2);
+}
+
+<else if 문>
+//ex 1)
+if(false){
+    alert(1);
+} else if(true){
+    alert(2);
+} else if(true){
+    alert(3);
+} else {
+    alert(4);
+}
+// 결과 : 2
+
+//ex 2)
+if(false){
+    alert(1);
+} else if(false){
+    alert(2);
+} else if(true){
+    alert(3);
+} else {
+    alert(4);
+}
+//결과 3
+
+//ex 3
+if(false){
+    alert(1);
+} else if(false){
+    alert(2);
+} else if(false){
+    alert(3);
+} else {
+    alert(4);
+}
+-----------------------------------------------------------------
+변수와 비교연산자
+prompt 키워드는 입력창을 생성한다.
+ex) prompt("당신의 나이는?"); //입력을 받는다.
+alert(prompt("당신의 나이는?")); //입력을 받고 출력을한다.
+
+ex 1)
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <script>
+        id = prompt('아이디를 입력해주세요.')
+        if(id=='egoing'){
+            alert('아이디가 일치 합니다.')
+        } else {
+            alert('아이디가 일치하지 않습니다.')
+        }
+    </script>
+</body>
+</html>
+
+ex 2)
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <script>
+        id = prompt('아이디를 입력해주세요.');
+        if(id=='egoing'){
+            password = prompt('비밀번호를 입력해주세요.');
+            if(password==='111111'){
+                alert('인증 했습니다.');
+            } else {
+                alert('인증에 실패 했습니다.');
+            }
+        } else {
+            alert('인증에 실패 했습니다.');
+        }
+    </script>
+</body>
+</html>
+--------------------------------------------------------------------
+&& and논리연산자
+좌항과 우항이 모두 참일경우에만 전체가 참이되는 연산자.
+
+ex 1) &&
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <script>
+        id = prompt('아이디를 입력해주세요.');
+        password = prompt('비밀번호를 입력해주세요.');
+        if(id=='egoing' && password=='111111'){
+            alert('인증 했습니다. +id+님 반갑습니다.');
+        } else {
+            alert('인증에 실패 했습니다.');
+        }
+    </script>
+</body>
+
+II or연산자 
+둘중하나라도 참이라면 참이다.
+
+ex 2) || 
+id = prompt('아이디를 입력해주세요.');
+password = prompt('비밀번호를 입력해주세요.');
+if((id==='egoing' || id==='k8805' || id==='sorialgi') && password==='111111'){
+    alert('인증 했습니다.');
+} else {
+    alert('인증에 실패 했습니다.');
+}
+----------------------------------------------------------------------
+! not연산자
+값을 역전시킨다. true는 false로 false는 true로
+----------------------------------------------------------------------
+반복문(loop, iterate)
+while문
+예시)
+var i = 0;
+while (i < 10){
+    document.write("Coding everybody "+i+"<br\>");
+    i = i + 1;
+}
+for문
+//문법
+for(초기화; 반복조건; 반복이 될 때마다 실행되는 코드){
+    반복해서 실행될 코드
+}
+//예시
+for(var i = 0; i < 10; i++){
+    document.write('coding everybody'+i+'<br />');
+}
+--------------------------------------------------------------------
+break 키워드 //종료
+for(var i = 0; i < 10; i++){
+    if (i === 5) {
+        break; 
+   }
+   document.write('coding everybody'+i+'<br />'); 
+}
+continue 키워드 // 그순간에만 종료
+--------------------------------------------------------------------
+반복문의 중첩사용
+// 0부터 9까지 변수 i에 순차적으로 값을 할당        
+for(var i = 0; i < 10; i++){
+    // 0부터 9까지의 변수를 j의 값에 순차적으로 할당
+    for(var j = 0; j < 10; j++){    
+        // i와 j의 값을 더한 후에 출력
+        // String은 숫자인 i와 j의 데이터 타입을 문자로 형태를 변환하는 명령이다. 
+        // String()을 제거하고 실행해보면 의미가 좀 더 분명하게 드러날 것이다.
+        document.write(String(i)+String(j)+'<br />');
+    }
+}
+---------------------------------------------------------------------
