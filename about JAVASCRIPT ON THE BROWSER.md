@@ -22,3 +22,16 @@ function handleTitleClick(){
 
 title.addEventListener("click",handleTitleClick);
 ```
+```
+<body>
+    <div id="title">grap me</div>
+    <p> document 는 우리의 브라우저를 의미한다.
+    콘솔창에 document.title 을 입력하면 브라우저의 타이틀을 보여준다. 
+    js 파일로 브라우저의 요소를 변경시키는 것 또한 가능하다. 
+    ```document.title = "title"``` title은 title로 변경되어있는 것을 확인할 수 있다. 
+    외에도 document. 으로 브라우저의 모든 부분을 확인 할 수 있다.  </p>
+        div.
+    <script src="app.js"></script>
+    
+</body>
+```
