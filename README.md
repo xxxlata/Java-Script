@@ -1,7 +1,4 @@
 # Javascript-doc
-Javascript 문법과 이해,<br>
-event listener 관련 예제 및 설명 레포지토리입니다.
-
 #### vanilla javascript 의 문법과 설명 및 학습한 기술예제 모음 레포지토리입니다.
 
 [파일 설명]<br>
